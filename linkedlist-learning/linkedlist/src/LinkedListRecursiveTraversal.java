@@ -1,5 +1,4 @@
-
-public class LinkedListCreation {
+public class LinkedListRecursiveTraversal {
     static class Node {
         int data;
         Node next;
@@ -20,6 +19,13 @@ public class LinkedListCreation {
         temp1.next = temp2;
         temp2.next = temp3;
 
-        System.out.println(head.data + " " + temp1.data + " " + temp2.data + " " + temp3.data);
+        printlist(head);
+    }
+
+    public static void printlist(Node head) {
+        if (head == null)
+            return;
+        System.out.println(head.data);
+        printlist(head.next);
     }
 }
